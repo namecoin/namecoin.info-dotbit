@@ -45,8 +45,8 @@
             <div class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
                 <li><a href="index.html">Home</a></li>
-                <li class="active"><a href="browse.html">Browsing Instructions</a></li>
-                <li><a href="your_website.html">Webmaster Instructions</a></li>
+                <li><a href="browse.html">Browsing Instructions</a></li>
+                <li class="active"><a href="your_website.html">Webmaster Instructions</a></li>
                 <li><a href="http://www.namecoin.info/">Powered by Namecoin</a></li>
                 <!--
                 <li><a href="#about">About</a></li>
@@ -80,8 +80,8 @@
           <img data-src="holder.js/900x500/auto/#777:#7a7a7a/text:%20" alt="">
           <div class="container">
             <div class="carousel-caption">
-              <h1>Browsing Dot-Bit Websites</h1>
-              <p>So you're interested in browsing Dot-Bit websites?  Excellent, we're here to help.  To learn about browsing Dot-Bit websites, check out the information below.</p>
+              <h1>Enabling Your Website for Dot-Bit</h1>
+              <p>Interested in operating a Dot-Bit website?  Awesome, you're in the right place.</p>
             </div>
           </div>
         </div>
@@ -100,11 +100,11 @@
       
       <div class="row featurette">
         <div class="col-md-7">
-          <h2 class="featurette-heading">NMControl</h2>
-          <p class="lead">NMControl allows viewing of Dot-Bit websites by acting as a local DNS server.  NMControl's main advantages are compatibility with all Internet applications (not just a web browser), and caching of data for extra speed.  NMControl requires Python, which makes it easy to install on Linux, but harder to install on Windows.  It also requires a namecoind or namecoin-qt client (see below) to be running, and you must manually change DNS settings to use it.</p>
-              <p class="lead">NMControl does not require trusting any third-party; all data is verified against the Namecoin blockchain.  NMControl therefore has good security.  NMControl also supports the DANE protocol which allows DNSSEC-compliant applications to securely use HTTPS without trusting any CA's.  NMControl has good, but not perfect, compatibility.</p>
-              <p class="lead">NMControl is primarily authored by khal and is an official Namecoin project.</p>
-              <p class="lead">To obtain NMControl, visit the <a href="https://github.com/namecoin/nmcontrol">GitHub project</a>.</p>
+          <h2 class="featurette-heading">Namecoin-Qt</h2>
+          <p class="lead">To register a Dot-Bit domain with a graphical interface (which you probably want), you first need to download Namecoin-Qt and obtain some NMC (the digital currency which runs Dot-Bit).</p>
+              <p class="lead">A command-line version, namecoind, is also provided if you want to register domains without a GUI or via scripting.</p>
+              <p class="lead">Namecoin-Qt/namecoind is primarily authored by snailbrain/thecoder/khal/vinced and is an official Namecoin project.</p>
+              <p class="lead"><a href="http://www.namecoin.info/">You can obtain Namecoin-Qt here (download the wallet).</a></p>
         </div>
         <!--<div class="col-md-5">
           <img class="featurette-image img-responsive" data-src="holder.js/500x500/auto" alt="">
@@ -118,11 +118,12 @@
           <img class="featurette-image img-responsive" data-src="holder.js/500x500/auto" alt="">
         </div>-->
         <div class="col-md-7">
-          <h2 class="featurette-heading">Convergence for Namecoin</h2>
-          <p class="lead">Convergence for Namecoin is a Firefox extension which allows Firefox to securely browse Dot-Bit websites.  It retrieves blockchain data from NMControl (meaning it requires NMControl and either namecoind or namecoin-qt to be running; see below).  Convergence for Namecoin has full HTTPS support built-in; Dot-Bit websites which have HTTPS enabled will automatically have their certificates checked against the Namecoin blockchain.  Unlike pure NMControl, if you're using Convergence for Namecoin, you will not have to touch your DNS settings.</p>
-              <p class="lead">Convergence for Namecoin has the same security properties as NMControl; i.e. it does not require trusting any third-party.  Convergence for Namecoin's HTTPS support makes it one of the most secure Dot-Bit tools, but it is known to have some compatibility issues with a few websites which work fine with pure NMControl.  Right now it must be built from source code (coders will know how to do this), so it may not be the best choice for a beginner.</p>
-              <p class="lead">Convergence for Namecoin is primarily authored by Jeremy Rand AKA biolizard89 and is an official Namecoin project.</p>
-              <p class="lead">To obtain Convergence for Namecoin, visit the <a href="https://github.com/namecoin/Convergence">GitHub project</a>.</p>
+          <h2 class="featurette-heading">DyName</h2>
+          <p class="lead">DyName is a dynamic DNS update client for Dot-Bit.  It is useful if your host can switch IP addresses without warning.</p>
+              <p class="lead">Dynamic DNS is typically risky for Dot-Bit, since the decrypted keys to transfer your domain are located on an Internet-connected server.  DyName supports a solution to this: name importation.  Register your main domain, e.g. d/valuablename, and keep its wallet encrypted.  Register a throwaway name, e.g. dd/useless, and configure DyName to write an IP address to dd/useless.  Use the "import" field in d/valuablename to access the IP address from dd/useless.  If someone hijacks or steals the throwaway name, just register a new one and change the "import" field in your main name.  If your main name has a TLS fingerprint, you won't even have a security risk if the name is stolen -- you'll just have some downtime where the site shows a TLS error.</p>
+              <p class="lead">The one caveat is that most .bit browsing solutions don't yet support DyName's security system.  There is active effort ongoing to make nmcontrol support it.  Until then, DyName is of limited usefulness.</p>
+              <p class="lead">DyName is primarily authored by Jeremy Rand AKA biolizard89.</p>
+              <p class="lead">To obtain DyName, visit the <a href="https://github.com/JeremyRand/DyName">GitHub project</a>.</p>
         </div>
       </div>
 
@@ -130,29 +131,15 @@
 
       <div class="row featurette">
         <div class="col-md-7">
-          <h2 class="featurette-heading">Volunteer-Run DNS Servers</h2>
-          <p class="lead">For quick testing, you can set your DNS settings to a DNS server run by a volunteer, which is configured to support Dot-Bit.  Using this for everyday browsing or anything sensitive is strongly discouraged, as the DNS server (or anyone between you and the server) can censor, hijack, or surveil all of your Internet traffic (both Dot-Bit and standard traffic).</p>
-          <p class="lead">A list of DNS servers is coming soon.</p>
+          <h2 class="featurette-heading">Online Registrars</h2>
+          <p class="lead">There are various online businesses which claim to allow registering Dot-Bit domains.  While these may be slightly more convenient than downloading the Namecoin blockchain, the cost is security.  The online registrar has the ability to hijack or steal your name, and so does any criminal who compromises the security of the registrar.  Registrars also typically charge much higher fees; we've seen registrars charge a 50-fold markup.
+          <p class="lead">A list of online Dot-Bit registrars is coming soon.</p>
         </div>
         <!--<div class="col-md-5">
           <img class="featurette-image img-responsive" data-src="holder.js/500x500/auto" alt="">
         </div>-->
       </div>
       
-      <hr class="featurette-divider">
-
-      <div class="row featurette">
-        <!--<div class="col-md-5">
-          <img class="featurette-image img-responsive" data-src="holder.js/500x500/auto" alt="">
-        </div>-->
-        <div class="col-md-7">
-          <h2 class="featurette-heading">Namecoin Client</h2>
-          <p class="lead">While the Namecoin Client (namecoind or namecoin-qt) doesn't let you browse Dot-Bit websites by itself, it is necessary for several of the above programs.</p>
-              <p class="lead">Namecoin is primarily authored by vinced and khal and is an official Namecoin project.</p>
-              <p class="lead">To download the Namecoin Client, visit <a href="http://namecoin.info">Namecoin.info</a> and download the wallet.</p>
-        </div>
-      </div>
-
       <hr class="featurette-divider">
 
       <!-- /END THE FEATURETTES -->
