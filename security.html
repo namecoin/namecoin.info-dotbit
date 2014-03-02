@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="bootstrap/docs-assets/ico/favicon.png">
+
+    <title>Dot-Bit: Secure Decentralized DNS</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="bootstrap/docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Custom styles for this template -->
+    <link href="carousel.css" rel="stylesheet">
+  </head>
+<!-- NAVBAR
+================================================== -->
+  <body>
+    <div class="navbar-wrapper">
+      <div class="container">
+
+        <div class="navbar navbar-inverse navbar-static-top" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">Dot-Bit</a>
+            </div>
+            <div class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="browse.html">Browsing Instructions</a></li>
+                <li><a href="your_website.html">Webmaster Instructions</a></li>
+                <li class="active"><a href="security.html">Security Model</a></li>
+                <li><a href="http://www.namecoin.info/">Powered by Namecoin</a></li>
+                <!--
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li class="dropdown-header">Nav header</li>
+                    <li><a href="#">Separated link</a></li>
+                    <li><a href="#">One more separated link</a></li>
+                  </ul>
+                </li>
+                -->
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Carousel
+    ================================================== -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="item active">
+          <img data-src="holder.js/900x500/auto/#777:#7a7a7a/text:%20" alt="">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Dot-Bit Security / Threat Model</h1>
+              <p>As with all security systems, Dot-Bit's security is dependent on a set of assumptions, outlined below.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- /.carousel -->
+
+
+
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <div class="container marketing">
+
+      <!-- START THE FEATURETTES -->
+      
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">51% Attacks</h2>
+          <p class="lead">Like Bitcoin, Namecoin's main vulnerability is the 51% attack.  If a malicious miner is able to obtain at least 51% of the mining power of the Namecoin network for an extended time, they will have the ability to reverse or block transactions.  Given enough time in this position, the attacker would be able to permanently steal any Dot-Bit domain name by either forcing it to expire or by reversing its registration transactions.</p>
+              <p class="lead">How difficult is this attack to pull off?  As of this writing (March 2, 2014), the Namecoin network's hashrate is 16.334 Phash/s.  If we assume that all of the current network is honest, then the attacker must purchase 16.334 Phash/s of hashpower.  A 5 Ghash/s miner from Butterfly Labs costs $274 USD.  16.334 Phash/s * 1,000,000 Ghash/Phash * $274 / 5 Ghash = $895,103,200 USD to purchase the necessary equipment to perform a 51% attack.  Performing the 51% attack would also require paying for electricity.  Butterfly Labs' miners are rated for between 4 and 5 W/Ghash/s.  Assuming the cheaper value of 4 W/Ghash/s, a 51% attack would require 16.334 Phash/s * 1,000,000 Ghash/Phash * 4 W/Ghash/s * 1 MW / 1,000,000 W = 65.336 megawatts of sustained power.  According to Wikipedia, power in the U.S. (outside of Hawaii) costs 8 to 17 cents per kWH.  Assuming 8, sustaining a 51% attack would cost 65.336 MW * 1000 kW/MW * $0.08 / kWh = $5,226.88 per hour that the attack is sustained.</p>
+              <p class="lead">In other words, Namecoin is insecure against any attacker who has sufficient resources and motivation to expend a one-time investment of $895,103,200 USD plus a continuing expense of $5,226.88 USD per hour (or 45,787,468.80 USD/year).  We won't speculate about which attackers have sufficient resources and motivation, but if your personal safety depends on Namecoin not being 51% attacked, you should consider your enemies' resources and motivation seriously.</p>
+        </div>
+        <!--<div class="col-md-5">
+          <img class="featurette-image img-responsive" data-src="holder.js/500x500/auto" alt="">
+        </div>-->
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <!--<div class="col-md-5">
+          <img class="featurette-image img-responsive" data-src="holder.js/500x500/auto" alt="">
+        </div>-->
+        <div class="col-md-7">
+          <h2 class="featurette-heading">Lite and Web Clients</h2>
+          <p class="lead">Like Bitcoin, Namecoin's security depends on each user being in sole possession of their keys, and each user being able to verify the contents of the blockchain.  Web clients (such as domain registrars) possess the keys to your domain, and therefore have the ability to compromise your domain if they are broken into, compelled by government order, offered money, decide they don't like you, or otherwise do not act in your interests.  For this reason, we recommend running your own full client and registering names locally.  Similarly, so-called "lite clients" as found in Bitcoin do not fully verify the blockchain, and therefore users of these clients in Namecoin may receive falsified name data.  For this reason, we recommend running full clients and not lite clients.</p>
+              <p class="lead">There are proposals for lite clients which are secure (called "SPV+UTXO clients").  There are also proposals for automatic name renewal without having your full client open.  These are NOT implemented yet.</p>
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">Loss of Private Keys</h2>
+          <p class="lead">Like Bitcoin, Namecoin's security relies on users not losing their private keys, either via malware or accidental deletion.  Namecoin-Qt includes wallet encryption; you should use it with a strong passphrase.  Any use case which requires that a wallet be automatically decrypted should be handled using the "name importation" feature, so that if the keys to the decrypted wallet are stolen, the security implications are reduced to a temporary denial-of-service rather than a permanent theft of the domain.  (DyName and NMControl both have support for this feature.)  Take standard steps to secure your computer against malware which may try to steal your keys.  Backup your wallet regularly to prevent loss of keys if your hard drive fails.  There is a proposal to port Armory to Namecoin to enable cold storage, but this is not implemented yet.</p>
+        </div>
+        <!--<div class="col-md-5">
+          <img class="featurette-image img-responsive" data-src="holder.js/500x500/auto" alt="">
+        </div>-->
+      </div>
+      
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <!--<div class="col-md-5">
+          <img class="featurette-image img-responsive" data-src="holder.js/500x500/auto" alt="">
+        </div>-->
+        <div class="col-md-7">
+          <h2 class="featurette-heading">Blockchain Data and History Is Unencrypted</h2>
+          <p class="lead">All names and their values are unencrypted in the Namecoin blockchain, which could impact privacy of name owners.  Don't place data in the blockchain that you don't want the world to see, and remember that once it's in the blockchain, it can't be removed.  There are proposals to encrypt blockchain data and remove expired name data, but they are not implemented yet.</p>
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">Namecoin Is Not Anonymous</h2>
+          <p class="lead">Like Bitcoin, Namecoin's blockchain provides easily linkable pseudonymity, NOT anonymity.  This means that name owners are easily linkable to their other Namecoin transactions.  If one of your transactions is with an exchange who knows your real name or IP address, you should assume that the exchange knows the real name or IP address associated with all of your names.  There are proposals for improving this, e.g. CoinJoin and Zerocoin, but they are not implemented yet.  If any of your transactions were not made via Tor, you can further assume that an attacker knows the IP address associated with all of your Namecoin transactions.</p>
+          <p class="lead">While looking up data from the Namecoin blockchain is relatively private since you do not generate any network traffic indicating which names you are looking up, there is no method of browsing Dot-Bit websites with TorBrowser.  This means that you are NOT anonymous while browsing Dot-Bit domains in a web browser.  Furthermore, even if TorBrowser support were added, it would be trivially easy for a website you visit to fingerprint you as one of the very few users capable of resolving Dot-Bit URL's.  The ONLY way that this could be resolved would be for The Tor Project to include Namecoin in the Tor Browser Bundle by default, which is almost certainly not going to happen in the foreseeable future.</p>
+          <p class="lead">As a side note, be aware that downloading the Namecoin blockchain via Tor might put too much strain on the Tor network.  SPV+UTXO will improve this situation when it is implemented.</p>
+        </div>
+        <!--<div class="col-md-5">
+          <img class="featurette-image img-responsive" data-src="holder.js/500x500/auto" alt="">
+        </div>-->
+      </div>
+      
+      <hr class="featurette-divider">
+
+      <!-- /END THE FEATURETTES -->
+
+      <!-- FOOTER -->
+      <footer>
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p>&copy; 2013-2014 Dot-Bit Contributors. <!--&middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a>--></p>
+      </footer>
+
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="bootstrap/docs-assets/js/holder.js"></script>
+  </body>
+</html>
