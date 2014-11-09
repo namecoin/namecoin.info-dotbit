@@ -190,6 +190,28 @@
       </div>
       
       <hr class="featurette-divider">
+      
+      <div class="row featurette">
+        <!-- <div class="col-md-7"> --> <div class="col-md-12">
+          <h2 class="featurette-heading">Tor and I2P support</h2>
+          <p class="lead"><strong>This is experimental; do not use it if you need anonymity.</strong><p>
+          <p class="lead">FreeSpeechMe supports a new feature of Dot-Bit domains: the ability to point to anonymously hosted websites using <a href="https://www.torproject.org/">Tor</a> or <a href="https://geti2p.net/">I2P</a>.  Tor and I2P are networks that allow users to host websites without revealing their identities or locations.<p>
+          <p class="lead">Tor and I2P are a necessity for human rights activists and whistleblowers working in repressive countries, and both networks were critical in keeping citizens safe during the Arab Spring.  Unfortunately, Tor- and I2P-hosted domain names normally have some issues: Tor domains (ending in .onion) are not human-memorable (e.g. duskgytldkxiuqc6.onion), and I2P domains (ending in .i2p) can resolve to different websites for different users (bad for security and censorship-resistance).  FreeSpeechMe allows Dot-Bit domains to be used to point to Tor- and I2P- hosted websites, and as with all Dot-Bit domains, they are human-memorable and only can point to the correct website.  Note that Dot-Bit only keeps the location and IP address of the domain owner private (assuming the domain is registered using Tor); the identity of the domain owner may be linkable with that person’s other usage of Namecoin (e.g. usernames at exchanges).  Because FreeSpeechMe is not compatible with TorBrowser, you will not be anonymous while <em>viewing</em> .bit websites, even if they are hosted via Tor or I2P.  As examples, FreeSpeechMe.org has set up two Dot-Bit domains using this: <a href="http://federalistpapers.bit">federalistpapers.bit</a> (requires Tor) and <a href="http://anonymous-git-hosting.bit">anonymous-git-hosting.bit</a> (requires I2P).  (These websites are not hosted by Namecoin or FreeSpeechMe.org, and are solely present as examples.)</p>
+          <p class="lead">Setup is a little bit tricky right now (meaning this is for advanced users only).  Instructions are below:</p>
+          <ol class="lead">
+            <li>You'll need to have a Tor and/or I2P SOCKS proxy running, and you'll need to know its port. This is usually 9050 for standalone Tor, or 9150 if you're running the Tor that came with the Tor Browser Bundle.  Leaving the Tor Browser Bundle running should be sufficient for Tor to be listening for SOCKS connections.  I2P generally requires messing with the settings in your I2P client, since typically a SOCKS proxy is not enabled by default.</li>
+            <li>In FreeSpeechMe settings, go to the "Proxies" tab. Fill in the IP (probably 127.0.0.1) and port where Tor or I2P is listening.</li>
+            <li>In FreeSpeechMe settings, go to the "Namecoin" tab. At the bottom of the dialog is a list of resolvers (currently including IPv4, IPv6, Tor, and I2P). Increase the priority of Tor and/or I2P so that it is above "Resolvers below this line will not be used."  If a .bit domain offers more than one resolver (e.g. offering both IPv4 and Tor, or both Tor and I2P), the order you choose here will determine which one is used.</li>
+            <li>By default, only the .bit domains that resolve to .onion or .i2p will go over the Tor or I2P proxy. If you want all of your other Firefox traffic to go through Tor or I2P too, you should setup the SOCKS proxy in Firefox's proxy settings. Make sure that remote DNS is enabled in Firefox proxy settings.</li>
+          </ol>
+          <p class="lead">And, again, a warning: using FreeSpeechMe with Tor/I2P will harm your anonymity, both because TorBrowser isn't supported, and because possessing the ability to resolve .bit will, by itself, narrow your anonymity set massively.  <strong>Do not use this if you need anonymity.</strong></p>
+        </div>
+        <!--<div class="col-md-5">
+          <img class="featurette-image img-responsive" data-src="holder.js/500x500/auto" alt="">
+        </div>-->
+      </div>
+      
+      <hr class="featurette-divider">
 
       <!-- /END THE FEATURETTES -->
 
